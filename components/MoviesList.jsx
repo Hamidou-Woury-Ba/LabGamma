@@ -4,14 +4,17 @@ export default function MoviesList(){
     useEffect(async () => {
         const reponse = await fetch("api/movies")
         const movies = await reponse.json()
+        setMovies(movies)
     }, [])
     return(
-        <div>
-            <h1>Movies List</h1>
+        <div className="p-10">
+            <h1 className="text-lg">Movies List</h1>
             <ul>
                 {movies.map(movie => {
                     return(
-                    <li key={movie.id}>{movie.releaseYear}</li>
+                    <li key={movie.id}>
+                        {movie.title} - {movie.releaseYear}
+                    </li>
                     );
                 })}
             </ul>

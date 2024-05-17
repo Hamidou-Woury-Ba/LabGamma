@@ -1,10 +1,12 @@
 export default function Products(){
     return (
-        <div>
-            <h1>Our Product List</h1>
-            <p>Phone</p>
-            <p>Computer</p>
-            <p>Computer</p>
+        <div className="p-4">
+            <h1 className="text-lg">Our Product List</h1>
+            <ul className="list-disc p-5">
+                <li>Phone</li>
+                <li>Computer</li>
+                <li>Computer</li>
+            </ul>
         </div>
     )
 }
